@@ -21,6 +21,6 @@ public class ExtendsEx01 {
         System.out.println(s2.kcal);
 
         라면 s3 = new 매운라면();
-        // System.out.println(s3.type);
+        System.out.println(s3.type);
     }
 }
