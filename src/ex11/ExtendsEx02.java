@@ -1,82 +1,137 @@
 package ex11;
 
 class 동물 {
-    int hp;
-    int attack;
-    int newhp;
 
-    void name() {
+    String getName() {
+        return "";
     }
 
-    void newHp() {
+    void setHp(int hp) {
     }
+
+    int getHp() {
+        return 0;
+    }
+
+    int getAttack() {
+        return 0;
+    }
+
 }
 
 class 사자 extends 동물 {
+
+    String getName() {
+        return name;
+    }
+
+    void setHp(int hp) { // 매개변수로 쓰는 int hp는 스택이 들고 있다.
+        this.hp = hp;
+    }
+
+    int getHp() {
+        return hp;
+    }
+
+    int getAttack() {
+        return attack;
+    }
+
     String name = "사자";
     int hp = 100;
     int attack = 10;
-    int newhp;
-
-    void name() {
-        System.out.println(this.name + "가 공격당하고 있습니다. 초기 hp는" + hp + "입니다");
-    }
-
-    void newHp() {
-        System.out.println("새로운 hp=" + newhp);
-    }
 
 }
 
 class 호랑이 extends 동물 {
-
     String name = "호랑이";
     int hp = 100;
     int attack = 15;
-    int newhp;
 
-    void name() {
-        System.out.println(this.name + "가 공격당하고 있습니다.초기 hp는" + hp + "입니다");
+    String getName() {
+        return name;
     }
 
-    void newHp() {
-        System.out.println("새로운 hp=" + newhp);
+    void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    int getHp() {
+        return hp;
+    }
+
+    int getAttack() {
+        return attack;
     }
 
 }
 
 class 곰 extends 동물 {
-
     String name = "곰";
     int hp = 100;
-    int attack = 40;
-    int newhp;
+    int attack = 50;
 
-    void name() {
-        System.out.println(this.name + "가 공격당하고 있습니다. 초기 hp는" + hp + "입니다");
+    String getName() {
+        return name;
     }
 
-    void newHp() {
-        System.out.println("새로운 hp=" + newhp);
+    void setHp(int hp) {
+        this.hp = hp;
     }
+
+    int getHp() {
+        return hp;
+    }
+
+    int getAttack() {
+        return attack;
+    }
+
+}
+
+class 늑대 extends 동물 {
+    String name = "늑대";
+    int hp = 100;
+    int attack = 30;
+
+    String getName() {
+        return name;
+    }
+
+    void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    int getHp() {
+        return hp;
+    }
+
+    int getAttack() {
+        return attack;
+    }
+
 }
 
 public class ExtendsEx02 {
+    // 오버라이딩 = 무효화하다 -> 아래로 타고 내려가는 기법
+    // 사자 -> 호랑이 공격
 
-    static void start(동물 unit1, 동물 unit2) {
+    static void attack(동물 u1, 동물 u2) {
 
-        unit2.name();
-        unit2.newhp = unit2.hp - unit1.attack;
-        unit2.newHp();
+        System.out.println(u2.getName() + "이" + u1.getName() + " 에게공격당하고 있습니다.");
+        u2.setHp(u2.getHp() - u1.getAttack());
+        System.out.println(u2.getName() + "의 hp : " + u2.getHp());
     }
 
     public static void main(String[] args) {
         동물 lion = new 사자();
         동물 tiger = new 호랑이();
         동물 bear = new 곰();
+        동물 woolf = new 늑대();
 
-        start(bear, lion);
-        start(lion, tiger);
-        start(tiger, bear);
+        attack(lion, tiger);
+        attack(bear, lion);
+        attack(tiger, bear);
+        attack(woolf, lion);
     }
 }
