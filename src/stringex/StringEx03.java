@@ -59,19 +59,24 @@ public class StringEx03 {
 
         String[] tokens = data.split("-");
 
-        String name = tokens[2];
+        if (tokens[0].equals("A01")) {
+            String name = tokens[2];
 
-        String tel = tokens[4];
-        String gender = tokens[6];
-        char gender1 = gender.charAt(0);
-        int age = Integer.parseInt(tokens[8]);
+            String tel = tokens[4];
+            String gender = tokens[6];
+            char gender1 = gender.charAt(0);
+            tokens[8] = tokens[8].trim();
+            int age = Integer.parseInt(tokens[8]);
 
-        회원정보 inform = new 회원정보(
-                name, tel, gender1, age);
+            회원정보 inform = new 회원정보(
+                    name, tel, gender1, age);
 
-        System.out.println(inform.getGender());
-        System.out.println(inform.getAge());
-        System.out.println(inform.getName());
-        System.out.println(inform.getTel());
+            System.out.println(inform.getGender());
+            System.out.println(inform.getAge());
+            System.out.println(inform.getName());
+            System.out.println(inform.getTel());
+        } else {
+            System.out.println("프로그램을 종료합니다.");
+        }
     }
 }
