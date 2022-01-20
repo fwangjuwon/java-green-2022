@@ -17,13 +17,6 @@ public class CollectionEx03 {
             datas.add(n);
             // hashset에 n값을 add해서 저장하라
 
-            // Set<Integer> lotto = new HashSet<>();
-            // ArrayList<Set<Integer>>list = new ArrayList<>();
-
-            // class lottelist{
-            // Set<Integer>
-            // }
-
             if (datas.size() == 6) {
                 break;
             }

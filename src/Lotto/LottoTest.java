@@ -19,6 +19,8 @@ public class LottoTest {
         data.add(41);
         data.add(42);
 
+        System.out.println(data);
+
         // 2. scanner로 금액 입력받기
         Scanner sc = new Scanner(System.in);
         int price = sc.nextInt();

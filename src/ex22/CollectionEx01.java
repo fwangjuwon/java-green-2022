@@ -3,21 +3,6 @@ package ex22;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-// interface Hello {
-// }
-
-// interface Haha {
-
-// }
-
-// class Bye implements Hello, Haha{
-
-// }
-
-// class Hi implements Hello{
-
-// }
-
 public class CollectionEx01 {
     public static void main(String[] args) {
         // arraylist는 데이터가 중복돼도 되는 데이터 모임을 만들 때 쓰면 된다.
