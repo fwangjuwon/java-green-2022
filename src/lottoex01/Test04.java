@@ -31,7 +31,7 @@ public class Test04 {
 
         List<Integer> list = new ArrayList<>(lotto);
 
-        Collections.sort(list);
+        Collections.sort(list); // test4 끝
         System.out.println(list);
 
         // 검증

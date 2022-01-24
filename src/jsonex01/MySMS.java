@@ -1,7 +1,6 @@
 package jsonex01;
 
 import java.util.HashMap;
-
 import org.json.simple.JSONObject;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
@@ -21,7 +20,7 @@ public class MySMS {
         // 4 params(to, from, type, text) are mandatory. must be filled
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("to", to);
-        params.put("from", "01047822368"); // 등록된 번호
+        params.put("from", "01000000000"); // 내 번호
         params.put("type", "SMS");
         params.put("text", text);
         params.put("app_version", "test app 1.2"); // application name and version
