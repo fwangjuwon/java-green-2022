@@ -1,21 +1,20 @@
 package coffeeshop;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-
 public class MenuItem {
-    public MenuItem(String string, int i) {
-    }
 
     private String name;
     private int price;
 
-    public Object getName() {
-        return null;
+    public MenuItem(String string, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }
