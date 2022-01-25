@@ -7,7 +7,7 @@ public class CoffeeProgram {
     public static void main(String[] args) {
 
         Customer customer = new 홍길동("홍길동");
-        Barista barista = new 공유("공유");
+        Barista barista = new 공유();
 
         MenuItem m1 = new MenuItem("아메리카노", 1500);
         MenuItem m2 = new MenuItem("카페라떼", 2500);
