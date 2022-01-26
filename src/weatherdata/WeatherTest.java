@@ -16,8 +16,7 @@ public class WeatherTest {
 
         try {
             URL url = new URL(
-                    "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=vw%2B%2BqXlNQbiDoQvLCzwd8Oc383avr%2B%2BJ9gEdiBTAG5xFPofE%2BWtxwzeAxL1eSi7HPHciJy7crzQgQ2RqRc10gw%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date="
-                            + baseDate + "&base_time=" + baseTime + "&nx=97&ny=75&_type=json");
+                    "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=vw%2B%2BqXlNQbiDoQvLCzwd8Oc383avr%2B%2BJ9gEdiBTAG5xFPofE%2BWtxwzeAxL1eSi7HPHciJy7crzQgQ2RqRc10gw%3D%3D&numOfRows=1000&pageNo=1&dataType=JSON&base_date=20220126&base_time=0600&nx=99&ny=75");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
@@ -37,7 +36,7 @@ public class WeatherTest {
         } catch (
 
         Exception e) {
-            System.out.println("조회오류");
+            System.out.println("조회오류" + e.getMessage());
         }
         return null;
     }

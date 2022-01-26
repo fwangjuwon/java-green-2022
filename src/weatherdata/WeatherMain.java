@@ -24,9 +24,9 @@ public class WeatherMain {
 
         Map<String, String> weatherMap = WeatherTest.getWeatherList(baseDate, baseTime);
 
-        System.out.println("부산진구의 현재 풍속은" + weatherMap.get("WSD") + "m/s 입니다.");
-        System.out.println("부산진구의 현재 기온은" + weatherMap.get("T1H") + "도 입니다.");
-        System.out.println("부산진구의 현재 습도는" + weatherMap.get("REH") + "% 입니다.");
-        System.out.println("부산진구의 현재 풍향은" + weatherMap.get("VEC") + " 입니다.");
+        System.out.println("수영구 남천동의 현재 풍속은" + weatherMap.get("WSD") + "m/s 입니다.");
+        System.out.println("수영구 남천동의 현재 기온은" + weatherMap.get("T1H") + "도 입니다.");
+        System.out.println("수영구 남천동의 현재 습도는" + weatherMap.get("REH") + "% 입니다.");
+        System.out.println("수영구 남천동의 현재 풍향은" + weatherMap.get("VEC") + " 입니다.");
     }
 }
