@@ -26,7 +26,7 @@ public class Test01 {
 
             String ResponseJson = br.readLine(); // 빈 칸에 받아보자. 실제로 돌릴려면 while돌려야해 (얼마나 길어질 지 모르니까 ㅎㅎ )
             Gson gson = new Gson();
-            ResponseDto dto = gson.fromJson(ResponseJson, ResponseDto.class);
+            ResponseDto1 dto = gson.fromJson(ResponseJson, ResponseDto1.class);
             List<Item> result = dto.getResponse().getBody().getItems().getItem();
             System.out.println(result);
             // System.out.println(dto);

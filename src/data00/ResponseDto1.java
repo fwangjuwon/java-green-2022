@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data // 게터와 세터와 투스트링 다 들고 있따.
 @AllArgsConstructor
-public class ResponseDto {
+public class ResponseDto1 {
     private Response response; // 변수명을 키 값과 꼭 동일하게 해야한다.!!!
 
     @Data // 게터와 세터와 투스트링 다 들고 있따.
