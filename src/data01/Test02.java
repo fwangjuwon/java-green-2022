@@ -40,7 +40,7 @@ public class Test02 {
                 airportMap.put(result.get(i).getAirportNm(), result.get(i).getAirportId());
             }
 
-            System.out.println(airportMap);
+            // System.out.println(airportMap);
             System.out.println(airportMap.get("제주"));
 
         } catch (Exception e) {

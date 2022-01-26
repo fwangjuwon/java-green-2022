@@ -11,21 +11,18 @@ public class MainApp {
 
         System.out.println("======출발일을 입력하세요======");
         System.out.println("ex) 20220125");
-
         // dePlandTime의 값이 길이가 8자가 아니면 종료한다.
         String depPlandTime = sc.nextLine();
 
         System.out.println("======출발지를 입력하세요======");
         System.out.println("ex) 김해, 무안, 광주, 군산, 여수, 원주, 양양, 제주");
         System.out.println("ex) 사천, 울산, 인천, 김포, 포항, 대구, 청주");
-
         // depAirportNm값이 길이가 2자가 아니면 프로그램 종료
         String depAirportNm = sc.nextLine();
 
         System.out.println("======도착지를 입력하세요======");
         System.out.println("ex) 김해, 무안, 광주, 군산, 여수, 원주, 양양, 제주");
         System.out.println("ex) 사천, 울산, 인천, 김포, 포항, 대구, 청주");
-
         // arrAirportNm 길이가 2자가 아니면 프로그램 종료.
         String arrAirportNm = sc.nextLine();
 
