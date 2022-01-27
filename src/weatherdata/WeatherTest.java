@@ -24,8 +24,23 @@ public class WeatherTest {
                     new InputStreamReader(conn.getInputStream(), "utf-8"));
 
             String responseJson = br.readLine();
+
             Gson gson = new Gson();
             WeatherDto dto = gson.fromJson(responseJson, WeatherDto.class);
+
+            String resultCode = dto.getResponse().getHeader().getResultCode();
+            // if (resultCode.equals(" 00")) { // 공백 00
+            // System.out.println("resultCode : " + resultCode);
+            // System.out.println("통신이 정상적으로 수행되지 않았습니다.");
+            // return; // 스택 종료!!
+            // }
+
+            // int totalCount = dto.getResponse().getBody().getTotalCount();
+            // if (totalCount == 0) {
+            // System.out.println("통신에 결과가 0건입니다.");
+            // return; // 스택종료
+            // }
+
             List<Item> result = dto.getResponse().getBody().getItems().getItem();
 
             for (int i = 0; i < result.size(); i++) {
