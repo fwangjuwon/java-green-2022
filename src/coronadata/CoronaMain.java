@@ -13,17 +13,9 @@ public class CoronaMain {
 
         String startCreateDt = sc.nextLine();
 
-        // if (startCreateDt.length() != 8) {
-        // System.exit(0);
-        // }
-
         System.out.println("ex) 20220115 종료일");
 
         String endCreateDt = sc.nextLine();
-
-        // if (endCreateDt.length() != 8) {
-        // System.exit(0);
-        // }
 
         List<Item> result = CoronaTest.getCoronaList(startCreateDt, endCreateDt);
 
